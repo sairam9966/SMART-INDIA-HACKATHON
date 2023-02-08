@@ -1,0 +1,92 @@
+body {
+    background: #eee;
+}
+
+#side-nav {
+    background: #000;
+    min-width: 250px;
+    max-width: 250px;
+    transition: all 0.4s;
+    position: fixed;
+    min-height: 100vh;
+    z-index: 10;
+}
+
+.content {
+    min-height: 100vh;
+    position: absolute;
+    width: 84.2vw;
+    left: 250px;
+}
+
+hr.h-color {
+    background: #eee;
+    color: #eee;
+    height: 2px;
+}
+
+.sidebar li.active {
+    background: #eee;
+    border-radius: 8px;
+}
+
+.sidebar li:hover {
+    background: #eee;
+    border-radius: 8px;
+}
+
+.sidebar a:hover {
+    color: #000;
+}
+
+.sidebar li.active a,
+.sidebar li.active a:hover {
+    color: #000;
+}
+
+.sidebar li a {
+    color: #fff;
+}
+
+.card {
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+    transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
+    /* padding: 14px 80px 18px 36px; */
+    cursor: pointer;
+}
+
+.container .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
+}
+.btn.btn-round {
+    border-radius: 40px;
+}
+.container-fluid{
+    width: 87.7rem;
+}
+.btn.btn-secondary {
+    color: black;
+    border-color: #8bbabb;
+    background: transparent;
+}
+
+@media(max-width: 767px) {
+    #side-nav {
+        margin-left: -250px;
+        position: fixed;
+        min-height: 100vh;
+        z-index: 10;
+    }
+
+    #side-nav.active {
+        margin-left: 0;
+    }
+
+    .content {
+        left: 0;
+        width: 100%;
+    }
+}
